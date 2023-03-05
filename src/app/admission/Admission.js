@@ -4,7 +4,7 @@ function Admission() {
 
   return(
     <div>
-      Admission App
+      Admission
     </div>
   );
 }

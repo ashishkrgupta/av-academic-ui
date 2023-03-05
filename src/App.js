@@ -6,22 +6,23 @@ import LandingPage from "./LandingPage";
 import AcademicApp from "./app/AcademicApp";
 import Admission from "./app/admission/Admission";
 import NotFound from "./NotFound";
+import Library from "./app/library/Library";
+import Transport from "./app/transport/Transport";
+import Finance from "./app/finance/Finance";
 
 function App() {
   return (
       <BrowserRouter>
-        {/* <nav>
-          <Link to="/">Home</Link>
-          <Link to="app">App</Link>
-        </nav> */}
         <Routes>
-          <Route path="/" element={<LandingPage />}>
+          <Route path="/" element={<LandingPage />}/>
           <Route path="/login" element={<Login />} />
           <Route path="/app" element={<AcademicApp />}>
             <Route path="admission" element={<Admission />} />
+            <Route path="finance" element={<Finance />} />
+            <Route path="transport" element={<Transport />} />
+            <Route path="library" element={<Library />} />
           </Route>
           <Route path="*" element={<NotFound />} />
-          </Route>
         </Routes>
       </BrowserRouter>
   );
